@@ -1,0 +1,7 @@
+[package]
+name = "stf-data"
+version = "0.1.0"
+authors = ["shaver"]
+edition = "2018"
+
+[dependencies]
