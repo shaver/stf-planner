@@ -1,3 +1,5 @@
+mod jobs;
+
 fn main() {
     extern crate clap;
     use clap::{App, Arg, SubCommand};
@@ -34,6 +36,7 @@ fn main() {
             let json = matches.value_of("json").unwrap();
 
         println!("using {} and {} to make {}", skills, talents, json);
+        jobs::load_jobs(skills);
     }
 
 }
