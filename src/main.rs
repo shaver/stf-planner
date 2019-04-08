@@ -36,7 +36,7 @@ fn main() {
             let json = matches.value_of("json").unwrap();
 
         println!("using {} and {} to make {}", skills, talents, json);
-        jobs::load_jobs(skills);
+        let jobs = jobs::load_jobs(skills);
     }
 
 }
