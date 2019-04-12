@@ -1,14 +1,33 @@
-pub struct Job<'a> {
-    name:          &'a str,
-    skill_names:   (&'a str, &'a str, &'a str),
-    skill_ratings: Vec<(u32, u32, u32)>
+pub struct SkillRating {
+    _name: String,          // Name of the skill
+    _ratings: Vec<u32>      // Ratings at levels 1 through 32
 }
 
-pub fn load_jobs(file: &str) -> Vec<Job> {
+pub struct Job {
+    _name:          String,
+    _skill_ratings: (SkillRating, SkillRating, SkillRating),
+}
+
+pub fn load_jobs(_file: &str) -> Vec<Job> {
+    extern crate csv;
     let jobs = vec![Job {
-                    name: "Dude",
-                    skill_names: ("Cooking", "Drinking", "Sleeping"),
-                    skill_ratings: vec![(1,1,1)]
+                    _name: "Dude".to_string(),
+                    _skill_ratings: (
+                        SkillRating {
+                            _name: String::from("Drinking"),
+                            _ratings: vec![0; 32] 
+                        },
+                        SkillRating {
+                            _name: String::from("Eating"),
+                            _ratings: vec![0; 32] 
+
+                        },
+                        SkillRating {
+                            _name: String::from("Sleeping"),
+                            _ratings: vec![0; 32] 
+                        }
+
+                    )
                 }];
     jobs
 }
