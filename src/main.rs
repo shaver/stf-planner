@@ -1,3 +1,7 @@
+extern crate csv;
+#[macro_use]
+extern crate serde_derive;
+
 mod jobs;
 
 fn main() {
@@ -36,7 +40,14 @@ fn main() {
             let json = matches.value_of("json").unwrap();
 
         println!("using {} and {} to make {}", skills, talents, json);
-        let jobs = jobs::load_jobs(skills);
+        match jobs::load_jobs(skills) {
+            Err(e) => {
+                    println!("Damn: {:?}", e);
+            }
+            Ok(jobs) => {
+                println!("loaded some jobs, here's the first:");
+                println!("{:?}", jobs);
+             }
+        };
     }
-
 }
