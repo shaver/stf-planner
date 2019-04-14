@@ -52,7 +52,6 @@ impl Job {
         match ratings.iter_mut().find(|sr| sr.name.eq(&name)) {
             Some(sr) => {
                 sr.ratings[rank] = rating;
-                println!("setting {}:{}[{}] to {}", &self.name, &sr.name, rank, rating);
             }
             None => {
                 assert_ne!(ratings.len(), 3);
@@ -134,7 +133,9 @@ pub fn load_jobs(skill_ratings_file: &str, talents_file: &str) -> Result<JobMap,
     let talents_path = Path::new(talents_file);
 
     let mut jobs = JobMap::new();
+    println!("Loading skill ratings from {}", skill_ratings_file);
     load_job_skills(File::open(&skills_path)?, &mut jobs)?;
+    println!("Loading talents from {}", talents_file);
     load_job_talents(File::open(&talents_path)?, &mut jobs)?;
 
     Result::Ok(jobs)

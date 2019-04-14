@@ -39,14 +39,13 @@ fn main() {
             let talents = matches.value_of("talents").unwrap();
             let json = matches.value_of("json").unwrap();
 
-        println!("using {} and {} to make {}", skills, talents, json);
         match jobs::load_jobs(skills, talents) {
             Err(e) => {
                     println!("Damn: {:?}", e);
             }
             Ok(jobs) => {
                 println!("loaded some jobs, here's the first:");
-                println!("{:?}", jobs);
+                println!("{:?}", jobs.iter().next());
              }
         };
     }
