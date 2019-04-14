@@ -40,7 +40,7 @@ fn main() {
             let json = matches.value_of("json").unwrap();
 
         println!("using {} and {} to make {}", skills, talents, json);
-        match jobs::load_jobs(skills) {
+        match jobs::load_jobs(skills, talents) {
             Err(e) => {
                     println!("Damn: {:?}", e);
             }

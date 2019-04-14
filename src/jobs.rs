@@ -16,12 +16,31 @@ pub struct SkillRating {
 }
 
 #[derive(Debug, Default)]
+pub struct Talent {
+    pub name: String,
+    pub rank: u32,
+    pub description: String,
+    pub cost: String,
+    pub type_: String
+}
+
+#[derive(Debug, Default)]
 pub struct Job {
     pub name: String,
-    pub skill_ratings: Vec<SkillRating>
+    pub skill_ratings: Vec<SkillRating>,
+    pub talents: Vec<Talent>
 }
 
 pub type JobMap = HashMap<String, Job>;
+
+fn find_job<'a>(map: &'a mut JobMap, name: &String) -> &'a mut Job {
+    map.entry(name.clone())
+        .or_insert(Job { name: name.clone(), ..Default::default()})
+}
+
+fn make_csv_reader<T: std::io::Read>(rdr: T) -> csv::Reader<T> {
+    csv::ReaderBuilder::new().delimiter(b':').from_reader(rdr)
+}
 
 impl Job {
     fn fill_rating(&mut self, rank: u32, name: String, rating: u32) {
@@ -43,6 +62,43 @@ impl Job {
             }
         }
     }
+
+    fn fill_talent(&mut self, name: String, rank: u32, description: String, cost: String, type_: String) {
+        let talents = &mut self.talents;
+        
+        talents.push(Talent { name, rank, description, cost, type_});
+        talents.sort_by(|a, b| {
+            if a.rank == b.rank {
+                a.name.cmp(&b.name)
+            } else {
+                a.rank.cmp(&b.rank)
+            }
+        });
+    }
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all="PascalCase")]
+struct TalentRecord {
+    name: String,
+    rank: u32,
+    description: String,
+    #[serde(rename="Cooldown")] cost: String,
+    job: String,
+    type_: String
+}
+
+fn load_job_talents<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, csv::Error> {
+    let mut rdr = make_csv_reader(rdr);
+
+    for result in rdr.deserialize() {
+        let record: TalentRecord = result?;
+        let job = find_job(map, &record.job);
+
+        job.fill_talent(record.name, record.rank, record.description, record.cost, record.type_);
+    }
+
+    Result::Ok(map.len())
 }
 
 #[derive(Debug, Deserialize)]
@@ -58,15 +114,11 @@ struct JobSkillRecord {
 }
 
 fn load_job_skills<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, csv::Error> {
-    let mut rdr = csv::ReaderBuilder::new()
-        .delimiter(b':')
-        .from_reader(rdr);
+    let mut rdr = make_csv_reader(rdr);
 
     for result in rdr.deserialize() {
         let record: JobSkillRecord = result?;
-        let name = &record.job_name;
-        let job = map.entry(name.clone())
-            .or_insert(Job { name: name.clone(), ..Default::default()});
+        let job = find_job(map, &record.job_name);
 
         job.fill_rating(record.rank, record.name1, record.rating1);
         job.fill_rating(record.rank, record.name2, record.rating2);
@@ -77,11 +129,13 @@ fn load_job_skills<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, 
     Result::Ok(map.len())
 }
 
-pub fn load_jobs(skill_ratings_file: &str) -> Result<JobMap, std::io::Error> {
-    let path = Path::new(skill_ratings_file);
+pub fn load_jobs(skill_ratings_file: &str, talents_file: &str) -> Result<JobMap, std::io::Error> {
+    let skills_path = Path::new(skill_ratings_file);
+    let talents_path = Path::new(talents_file);
 
     let mut jobs = JobMap::new();
-    load_job_skills(File::open(&path)?, &mut jobs)?;
+    load_job_skills(File::open(&skills_path)?, &mut jobs)?;
+    load_job_talents(File::open(&talents_path)?, &mut jobs)?;
 
     Result::Ok(jobs)
 }
