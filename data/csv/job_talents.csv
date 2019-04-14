@@ -256,7 +256,7 @@ Orderly Drop:5:Lands efficiently in a zone, reduces operation time to 1 Turn and
 Perfected Approach:5:Faultless tracking of the enemy allows rapid closing. Buffs Ship with +1 Reactor Pts, +5% Shield, +25 Range Change, -10 Escape for next 2 Turns:3 weeks Cooldown:Hyperwarp Navigator:Ship Combat
 Distant Commission:8:Increases Mission payment for Missions that require more than 4 Hyperwarp jumps, adding 3% for each jump over 4, to a maximum of 30% bonus:3 weeks Cooldown:Hyperwarp Navigator:Mission
 Talk of Far Worlds:8:When passing the Spice plate in the Hall, talk of distant worlds grants a 10% + Navigation Skill chance for an introduction to a new Contact:13 weeks Cooldown:Hyperwarp Navigator:Contact
-Skip Off the Void:11:Use a short-burst of the hyperwarp drive to 'bounce' a short distance and escape ship combat. Causes 30-70% Damage to the drive, mitigated by entire crew's Navigation Skill and burns Fuel equal to a hyperwarp jump:Hyperwarp Navigator:Encounter
+Skip Off the Void:11:Use a short-burst of the hyperwarp drive to 'bounce' a short distance and escape ship combat. Causes 30-70% Damage to the drive, mitigated by entire crew's Navigation Skill and burns Fuel equal to a hyperwarp jump:9 weeks Cooldown:Hyperwarp Navigator:Encounter
 Expert Maneuver:1:Automatically passes a failed Pilot test in any situation, including deep space travel, landing, or hyperwarp travel:3 weeks Cooldown:Pilot:Skill Save
 Guided Fire:1:Buffs Ship with +15% Accuracy, +10% Critical for next 3 Turns:3 weeks Cooldown:Pilot:Ship Combat
 Sure Landfall:1:Lands efficiently on a world, reduces operation time to 1 Turn and Fuel Cost to 1:3 weeks Cooldown:Pilot:Landing
