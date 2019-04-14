@@ -1,9 +1,8 @@
 /*
     TODO:
-    - print all
+    - load talents
     - JSON
     - move to lib?
-    - load talents
 */
 
 use std::collections::HashMap;
@@ -59,7 +58,6 @@ struct JobSkillRecord {
 }
 
 fn load_job_skills<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, csv::Error> {
-
     let mut rdr = csv::ReaderBuilder::new()
         .delimiter(b':')
         .from_reader(rdr);
@@ -80,7 +78,6 @@ fn load_job_skills<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, 
 }
 
 pub fn load_jobs(skill_ratings_file: &str) -> Result<JobMap, std::io::Error> {
-
     let path = Path::new(skill_ratings_file);
 
     let mut jobs = JobMap::new();
