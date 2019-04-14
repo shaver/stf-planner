@@ -1,7 +1,5 @@
 /*
     TODO:
-    - test from string CSV
-    - validate SkillRatings
     - print all
     - JSON
     - move to lib?
