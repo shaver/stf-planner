@@ -1,6 +1,6 @@
 Name:Rank:Description:Cooldown:Job:Type
 Expert Planning:1:Automatically passes a failed Tactics test in any situation, including on patrol, deep space travel, or during a mission:3 weeks Cooldown:Military Officer:Skill Save
-Power Play:1:When completing steps in a Mission, increase Faction Reputation bonuses by Charisma %:3 weeks Cooldown:Military Officer:Reputation
+Power Play:1:When completing steps in a Mission, increase Faction Reputation bonuses by Charisma%:3 weeks Cooldown:Military Officer:Reputation
 Militant Patrol:1:When Patrolling a system, increase rewards by 10% + Command Skill:3 weeks Cooldown:Military Officer:Patrol
 Stiff Salute:1:When encountering a Military Officer or Zealot Captain, a respectful military salute automatically ends the encounter with a Draw; Reputation penalties may still apply:3 weeks Cooldown:Military Officer:Encounter
 Tactical Edge:1:In crew combat, Buffs with +4 Initiative, +20% All Damage, +10% Armor for 3 Turns, pushes target 1 slot:Costs 6 Initiative to use:Military Officer:Combat
@@ -14,7 +14,7 @@ Call for Surrender:5:After a successful Boarding, demand for quick surrender cau
 Overriding Discipline:8:Buffs Ship with +10% Boarding, +10% Accuracy, +10% Dmg, +10% Defense for next 3 Turns, Purges Ship of any Crippling Ship Effects, Restores Command Skill worth of Morale to 10 Crew:3 weeks Cooldown:Military Officer:Combat
 Military Discipline:8:Barked orders and rigid authority can snap a mutiny in seconds. The mutiny ends and Morale of entire crew is increased by 10 + Command skill:26 weeks Cooldown:Military Officer:Mutiny
 Steely Authority:8:In crew combat, Buffs 2 targets with +30% Deflection, +10% Armor, +75% To Resist Debuffs for 3 Turns and Restores (10 + 0 Tactics) Morale:Costs 12 Initiative to use:Military Officer:Combat
-Honorable Release:8:Increase profit when ransoming defeated ship back to their Faction by 10% + Command Skill, plus Wisdom % chance to gain small Reputation bonus:9 weeks Cooldown:Military Officer:Victory
+Honorable Release:8:Increase profit when ransoming defeated ship back to their Faction by 10% + Command Skill, plus Wisdom% chance to gain small Reputation bonus:9 weeks Cooldown:Military Officer:Victory
 Incite Victory:11:Buffs Ship with +20% Boarding, +25% Accuracy, +25% Dmg, +25% Critical for next 3 Turns, Restores Command Skill worth of Morale to 10 Crew:3 weeks Cooldown:Military Officer:Ship Combat
 Boarding Rush:11:When making Initiative Roll in Crew Combat, Buff yourself with +2 Initiative, +10% All Accuracy, +10% All Damage for 2 Turns:Chance to activate at the start of each combat turn:Military Officer:On Init
 Guardian Vigil:11:When Patrolling a system, replace a risk card with Mission success reward card.:3 weeks Cooldown:Military Officer:Patrol
@@ -27,7 +27,7 @@ Rallying Aura:1:In crew combat, Buffs entire team with +10% All Damage, +10% Cri
 Quell Mutiny:5:Powerful words from a strong leader pull the crew together. The mutiny ends and Morale of the entire crew is increased by 10 + Command skill:26 weeks Cooldown:Commander:Mutiny
 Barked Order:5:In crew combat, intimidating command causes -25% All Accuracy, -25% All Damage for 3 Turns, knocks target back 1 slot:Costs 12 Initiative to use:Commander:Combat
 Bolster:8:In crew combat, Removes all Debuffs; Restores (30 + 0 Command) Morale:Costs 6 Initiative to use:Commander:Combat
-Shrewd Dealings:8:When accepting a Mission, gain a (Charisma + Command %) chance to discover one of your Contact's hidden Traits:3 weeks Cooldown:Commander:Traits
+Shrewd Dealings:8:When accepting a Mission, gain a (Charisma + Command%) chance to discover one of your Contact's hidden Traits:3 weeks Cooldown:Commander:Traits
 Precision Action:8:Purges your Ship of both Crew and Ship Crippling Effects:3 weeks Cooldown:Commander:Ship Combat
 Scorn:11:In crew combat, intimidating command hits 2 targets causes -4 Initiative, -25% Deflection for 2 Turns:Costs 8 Initiative to use:Commander:Combat
 Coordinated Fire:11:Buffs Ship with +35% Dmg, +25% Critical for next 3 Turns::Commander:Ship Combat
@@ -99,14 +99,14 @@ Clink of Credits:11:When Spying in the orbit of a system, replace a risk card wi
 Sly Move:1:Automatically passes a failed Stealth test in any situation; including exploring, landing or during a mission:3 weeks Cooldown:Spy:Skill Save
 Espionage Sweep:1:When Spying in the orbit of a system, remove a risk card:3 weeks Cooldown:Spy:Spy
 Disappearing Act:1:In crew combat, Buff yourself with +2 Initiative, +25% Parry, +25% Dodge, Engages Stealth Mode, +(10% + Stealth) Critical; lasts for 3 Turns:Costs 8 Initiative to use:Spy:Combat
-Close Observation:1:Sharp scrutiny grants Wisdom % to reveal a Contact's hidden Traits during any interaction where money changes hands:26 weeks Cooldown:Spy:Traits
+Close Observation:1:Sharp scrutiny grants Wisdom% to reveal a Contact's hidden Traits during any interaction where money changes hands:26 weeks Cooldown:Spy:Traits
 Shadowed Fire:1:In crew combat, Pistol Attack with +25% Ranged Damage, +25% Armor Piercing, +25% Critical; Requires Stealth Mode to use:Costs Weapon's Initiative to use (No Valid Weapon):Spy:Combat
 Deft Control:5:Automatically passes a failed Electronics test in any situation, including spying, deep space travel, or during a mission:3 weeks Cooldown:Spy:Skill Save
 Bolt:5:Buffs Ship with +30 Escape for next 3 Turns:3 weeks Cooldown:Spy:Ship Combat
 Distracting Shots:5:In crew combat, Pistol Attack with +10% Ranged Damage, +10% Armor Piercing, retreats 1 slot. Successful attack Buffs yourself with Engages Stealth Mode, +(10% + Stealth) Critical for 3 Turns:Costs Weapon's Initiative to use (No Valid Weapon):Spy:Combat
 Scouring Search:5:When Spying in the orbit of a system, replace a risk card with an Intel Records reward card.:3 weeks Cooldown:Spy:Spy
 Unauthorized Access:5:After a successful Boarding, breaking into the enemy ship's data banks; steals up to Electronics Skill in Intel Records:3 weeks Cooldown:Spy:Boarding
-Data Haul:8:Increases price for sold Intel Records by 10% + Electronics Skill. Contact Influence gains or losses increased by Charisma %:3 weeks Cooldown:Spy:Intel
+Data Haul:8:Increases price for sold Intel Records by 10% + Electronics Skill. Contact Influence gains or losses increased by Charisma%:3 weeks Cooldown:Spy:Intel
 Faked Signature:8:Confusing or forged credentials are enough to throw even the most dogged pursuer; can be used to reduce the hostility of Bounty Hunters:3 weeks Cooldown:Spy:Encounter
 Sneak Attack:8:In crew combat, Crippling Pistol Attack with +10% Ranged Damage, +10% Critical; successful hit 50% Stun target and causes -4 Initiative for 3 Turns; Requires but ends Stealth Mode to use:Costs Weapon's Initiative to use (No Valid Weapon):Spy:Combat
 High Stakes:11:When Spying in the orbit of a system, increase all Intel rewards by 30% + Electronics Skill:3 weeks Cooldown:Spy:Spy
@@ -129,7 +129,7 @@ Gut the Leadership:15:After a successful Boarding, whirling shade strikes down a
 Careful Testing:1:Automatically passes a failed Repair test in any situation, including wild zone repairs or deep space travel:3 weeks Cooldown:Mechanic:Skill Save
 Discounted Repairs:1:Reduces cost of ship repair at a Starport by 10% + Repair Skill:3 weeks Cooldown:Mechanic:Repair
 Engine Precision:1:Buffs Ship with +2 Reactor Pts, +20% Defense, Self-inflicts +10 Component Dmg/Turn for next 2 Turns:3 weeks Cooldown:Mechanic:Ship Combat
-Expert Scavenger:1:Salvage the wreck of a destroyed ship for valuable scrap, add 10% + Repair Skill to your profits and repair equal % of your own Hull:3 weeks Cooldown:Mechanic:Victory
+Expert Scavenger:1:Salvage the wreck of a destroyed ship for valuable scrap, add 10% + Repair Skill to your profits and repair equal% of your own Hull:3 weeks Cooldown:Mechanic:Victory
 System Flush:5:Purges Ship of any Crippling Ship Effects:3 weeks Cooldown:Mechanic:Ship Combat
 Thrown Wrench:5:After a successful Boarding, sabotages components to cause a ripple effect of damage and death; -3 Reactor Pts, +25 Component Dmg/Turn, +10 Crew Dmg/Turn for next 4 Turns:9 weeks Cooldown:Mechanic:Boarding
 Engine Reboot:5:Repairs Ship Engine up to 10% plus Repair Skill:9 weeks Cooldown:Mechanic:Ship Combat
@@ -228,17 +228,17 @@ Firing Orders:11:Buffs Ship with +35% Accuracy, +35% Dmg for next 3 Turns:3 week
 Settlement:1:Automatically passes a failed Negotiate test in any situation; including deep space travel, mutiny or during a mission:3 weeks Cooldown:Diplomat:Skill Save
 Winning Compromise:1:Increases your payment for every step in a Mission by 10% + Negotiate Skill:3 weeks Cooldown:Diplomat:Mission
 Silver Tongue:1:Price for military Rank is discounted by 10% + Negotiate Skill:3 weeks Cooldown:Diplomat:Discount
-Expose Quality:1:Empathetic sense grants Wisdom % to reveal a Contact's hidden Traits during any interaction where money changes hands:26 weeks Cooldown:Diplomat:Traits
+Expose Quality:1:Empathetic sense grants Wisdom% to reveal a Contact's hidden Traits during any interaction where money changes hands:26 weeks Cooldown:Diplomat:Traits
 Hand that Feeds:5:When paying your crew, increase Morale bonus for those paid. Any Morale penalty for any unpaid crew is reduced:3 weeks Cooldown:Diplomat:Morale
-Upstaged Success:5:Increase Contact Reputation and Influence bonuses when completing a Mission by Charisma %:3 weeks Cooldown:Diplomat:Reputation
+Upstaged Success:5:Increase Contact Reputation and Influence bonuses when completing a Mission by Charisma%:3 weeks Cooldown:Diplomat:Reputation
 Warm Invitation:5:Receive a [10 + Negotiate]% discount on price of Contact Introductions:3 weeks Cooldown:Diplomat:Discount
 Magnanimous Victory:8:Forgiving and charitable even in victory over another ship, negates Reputation damage up to your Negotiate Skill:3 weeks Cooldown:Diplomat:Victory
 Legal Pressure:8:Increase profit when ransoming defeated ship back to their Faction by 10% + Intimidate Skill:9 weeks Cooldown:Diplomat:Victory
 Political Hooks:11:Increase Conflict Score bonus by 10% + Faction Rank when impacting a Conflict through Missions, Spying, Blockade or Patrol:3 weeks Cooldown:Diplomat:Conflict
 Wise Counsel:1:Automatically passes a failed Negotiate test in any situation; including deep space travel, mutiny or during a mission:3 weeks Cooldown:Merchant:Skill Save
-Known Trader:1:Discounts price for trading Permit by 10% + Negotiate Skill. Contact spends Charisma % less Reputation:3 weeks Cooldown:Merchant:Discount
+Known Trader:1:Discounts price for trading Permit by 10% + Negotiate Skill. Contact spends Charisma% less Reputation:3 weeks Cooldown:Merchant:Discount
 Market Confidant:1:When executing a trade at the Exchange worth over $5,000, you have a 10% + Charisma chance of gaining an introduction to a Contact from the local Faction:9 weeks Cooldown:Merchant:Contact
-Friendly Banter:1:When passing the Spice plate, you have a Charisma % chance to learn about a Contact from the idle banter in the Hall:13 weeks Cooldown:Merchant:Contact
+Friendly Banter:1:When passing the Spice plate, you have a Charisma% chance to learn about a Contact from the idle banter in the Hall:13 weeks Cooldown:Merchant:Contact
 Garner Favor:5:When executing a trade at the Exchange worth over $5,000, gain Reputation up to your Negotiate Skill with the local Faction:9 weeks Cooldown:Merchant:Reputation
 Cordial Invitation:5:Receive up to your Negotiate Skill in Reputation bonus with a new Contact when buying an Introduction:3 weeks Cooldown:Merchant:Reputation
 Generosity:5:When paying your crew, increase Morale bonus for those paid. Any Morale penalty for any unpaid crew is reduced:3 weeks Cooldown:Merchant:Morale
