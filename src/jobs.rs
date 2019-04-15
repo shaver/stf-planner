@@ -1,6 +1,5 @@
 /*
     TODO:
-    - load talents
     - JSON
     - move to lib?
 */
@@ -33,9 +32,9 @@ pub struct Job {
 
 pub type JobMap = HashMap<String, Job>;
 
-fn find_job<'a>(map: &'a mut JobMap, name: &String) -> &'a mut Job {
-    map.entry(name.clone())
-        .or_insert(Job { name: name.clone(), ..Default::default()})
+fn find_job<'a>(map: &'a mut JobMap, name: &str) -> &'a mut Job {
+    map.entry(name.to_string())
+        .or_insert(Job { name: name.to_string(), ..Default::default()})
 }
 
 fn make_csv_reader<T: std::io::Read>(rdr: T) -> csv::Reader<T> {
