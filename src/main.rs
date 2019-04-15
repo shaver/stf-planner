@@ -37,7 +37,7 @@ fn main() {
     if let Some(matches) = matches.subcommand_matches("jobs") {
             let skills = matches.value_of("skills").unwrap();
             let talents = matches.value_of("talents").unwrap();
-            let json = matches.value_of("json").unwrap();
+            let _json = matches.value_of("json").unwrap();
 
         match jobs::load_jobs(skills, talents) {
             Err(e) => {
