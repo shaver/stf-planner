@@ -172,14 +172,39 @@ mod tests {
         load_job_skills(csv, &mut j).unwrap();
 
         let aj = &j["Assassin"];
-        let cmj = &j["Combat Medic"];
-        assert_eq!(aj.name, ("Assassin"));
+        assert_eq!(aj.name, "Assassin");
         assert_eq!(aj.skill_ratings.len(), 3);
 
         let aj_blades = aj.skill_ratings.iter().find(|sr| sr.name.eq("Blades")).unwrap();
         assert_eq!(aj_blades.ratings[2], 4);
         assert_eq!(aj_blades.ratings[8], 6);
 
+        let cmj = &j["Combat Medic"];
         assert_eq!(cmj.skill_ratings.len(), 2);
+    }
+
+    const TEST_TALENTS_CSV: &str =
+"Name:Rank:Description:Cooldown:Job:Type
+B Talent:1:Do another thing:8 week Cooldown:Doer:Flop
+A Talent:1:Do a thing:4 week Cooldown:Doer:Flex
+Wiggle:5:Shake but only a little bit:Weapon initiative:Fighter:Combat";
+
+    #[test]
+    fn test_load_talents() {
+        let csv = TEST_TALENTS_CSV.as_bytes();
+        let mut j = JobMap::new();
+
+        load_job_talents(csv, &mut j).unwrap();
+
+        let dj = &j["Doer"];
+        assert_eq!(dj.name, "Doer");
+        assert_eq!(dj.talents.len(), 2);
+        assert_eq!(dj.talents[0].name, "A Talent");
+        assert_eq!(dj.talents[1].rank, 1);
+
+        let fj = &j["Fighter"];
+        assert_eq!(fj.talents.len(), 1);
+        assert_eq!(fj.talents[0].rank, 5);
+        assert_eq!(fj.talents[0].type_, "Combat");
     }
 }
