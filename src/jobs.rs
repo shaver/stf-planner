@@ -37,10 +37,6 @@ fn find_job<'a>(map: &'a mut JobMap, name: &str) -> &'a mut Job {
         .or_insert(Job { name: name.to_string(), ..Default::default()})
 }
 
-fn make_csv_reader<T: std::io::Read>(rdr: T) -> csv::Reader<T> {
-    csv::ReaderBuilder::new().delimiter(b':').from_reader(rdr)
-}
-
 impl Job {
     fn fill_rating(&mut self, rank: u32, name: String, rating: u32) {
         let ratings = &mut self.skill_ratings;
@@ -84,6 +80,10 @@ struct TalentRecord {
     #[serde(rename="Cooldown")] cost: String,
     job: String,
     type_: String
+}
+
+fn make_csv_reader<T: std::io::Read>(rdr: T) -> csv::Reader<T> {
+    csv::ReaderBuilder::new().delimiter(b':').from_reader(rdr)
 }
 
 fn load_job_talents<T: std::io::Read>(rdr: T, map: &mut JobMap) -> Result<usize, csv::Error> {

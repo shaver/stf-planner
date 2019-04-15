@@ -3,6 +3,7 @@ extern crate csv;
 extern crate serde_derive;
 
 mod jobs;
+mod ships;
 
 fn main() {
     extern crate clap;
